@@ -1,0 +1,32 @@
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: iransans-regular;
+  background-color: #f6f6f6;
+  direction: ltr !important;
+  padding-right: 0 !important;
+}
+* {
+  font-family: iransans-regular;
+  text-decoration: none !important;
+}
+
+.container-fluid {
+  padding: 0 !important;
+}
+
+.Toastify {
+  z-index: 999999 !important;
+}
+
+.DatePicker {
+  width: 100%;
+  z-index: 0 !important;
+}
+
+.form-control:disabled,
+.form-control[readonly] {
+  background-color: #fff;
+  text-align: right;
+}
