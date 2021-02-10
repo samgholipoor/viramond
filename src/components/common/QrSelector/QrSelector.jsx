@@ -15,6 +15,7 @@ const QrSelector = ({ qrResult, setToggle }) => {
       if (permissionObj.state === "granted") {
         setToggle(true);
       }
+      console.log(permissionObj.state);
     });
   };
 

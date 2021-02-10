@@ -1,5 +1,10 @@
 import React, { useState } from "react";
-import { Container, Holder, ImageContainer } from "./LandingPage.styles";
+import {
+  Container,
+  Holder,
+  ImageContainer,
+  QrContainer,
+} from "./LandingPage.styles";
 import { Header } from "../common/Header";
 import { QrScanner } from "../common/QrScanner";
 import { QrSelector } from "../common/QrSelector";
@@ -15,11 +20,13 @@ const LandingPageComponent = () => {
         <ImageContainer>
           <img src="/images/bg.jpg" alt="landingpage" />
         </ImageContainer>
-        {!toggle ? (
-          <QrSelector qrResult={qrResult} setToggle={setToggle} />
-        ) : (
-          <QrScanner setValue={setQrResult} setToggle={setToggle} />
-        )}
+        <QrContainer>
+          {!toggle ? (
+            <QrSelector qrResult={qrResult} setToggle={setToggle} />
+          ) : (
+            <QrScanner setValue={setQrResult} setToggle={setToggle} />
+          )}
+        </QrContainer>
       </Holder>
     </Container>
   );

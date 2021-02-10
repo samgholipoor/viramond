@@ -21,3 +21,15 @@ export const ImageContainer = styled.div`
     object-fit: cover;
   }
 `;
+export const QrContainer = styled.div`
+  width: 100%;
+  height: 220px;
+  margin: 5px 0;
+  padding: 0 5px;
+
+  & > * {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+`;

@@ -15,8 +15,9 @@ const QrScanner = ({ setValue, setToggle }) => {
     <QrReader
       delay={100}
       style={{
-        height: 240,
-        width: 320,
+        height: "inherit",
+        width: "inherit",
+        borderRadius: "8px",
       }}
       onError={handleError}
       onScan={handleScan}
