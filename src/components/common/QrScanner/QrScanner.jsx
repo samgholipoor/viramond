@@ -20,7 +20,6 @@ const QrScanner = ({ setValue, setToggle }) => {
       }}
       onError={handleError}
       onScan={handleScan}
-      reactivate={true}
     />
   );
 };

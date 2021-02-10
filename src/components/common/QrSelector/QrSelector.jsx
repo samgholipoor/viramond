@@ -10,9 +10,17 @@ import {
 } from "./QrSelector.styles";
 
 const QrSelector = ({ qrResult, setToggle }) => {
+  const handleToggle = () => {
+    navigator.permissions.query({ name: "camera" }).then((permissionObj) => {
+      if (permissionObj.state === "granted") {
+        setToggle(true);
+      }
+    });
+  };
+
   return (
     <>
-      <QrContainer onClick={() => setToggle(true)}>
+      <QrContainer onClick={handleToggle}>
         <QrHolder>
           <Title>Qr Code اسکن جیتا کد و </Title>
           <IconContainer>
