@@ -10,13 +10,6 @@ const NotFoundPage = () => {
   return (
     <NotFoundContainer>
       <ImageContainer src="/images/not-found.jpg" />
-
-      <DirectorContainer>
-        <Director to="/">
-          <i className="fa fa-caret-left"></i>
-          <span> بازگشت به خانه </span>
-        </Director>
-      </DirectorContainer>
     </NotFoundContainer>
   );
 };

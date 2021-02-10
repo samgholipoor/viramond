@@ -1,31 +1,25 @@
-import React from "react";
-import {
-  Container,
-  Holder,
-  ImageContainer,
-  ContextContainer,
-  Title,
-  Title2,
-  Description,
-} from "./LandingPage.styles";
+import React, { useState } from "react";
+import { Container, Holder, ImageContainer } from "./LandingPage.styles";
 import { Header } from "../common/Header";
+import { QrScanner } from "../common/QrScanner";
+import { QrSelector } from "../common/QrSelector";
 
 const LandingPageComponent = () => {
+  const [toggle, setToggle] = useState(false);
+  const [qrResult, setQrResult] = useState("");
+
   return (
     <Container>
       <Holder>
         <Header />
         <ImageContainer>
-          <img src="/images/landingpage.png" alt="landingpage" />
+          <img src="/images/bg.jpg" alt="landingpage" />
         </ImageContainer>
-        <ContextContainer>
-          <Title>مارکت پلیس</Title>
-          <Title2>هر هفته بیش از یک میلیون نفر از ترب استفاده میکنند</Title2>
-          <Description>
-            محصولات خود را بین میلیون‌ها محصول و در کنار هزاران فروشگاه اینترنتی
-            در معرض دید خریداران قرار دهید.
-          </Description>
-        </ContextContainer>
+        {!toggle ? (
+          <QrSelector qrResult={qrResult} setToggle={setToggle} />
+        ) : (
+          <QrScanner setValue={setQrResult} setToggle={setToggle} />
+        )}
       </Holder>
     </Container>
   );

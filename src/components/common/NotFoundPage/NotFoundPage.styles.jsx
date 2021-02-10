@@ -1,22 +1,10 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
-export const AdminNotFoundContainer = styled.div`
-  width: 100vw;
-  height: 100vh;
-  background-color: #fff !important;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  @media only screen and (max-width: 550px) {
-    height: 100vh;
-  }
-`;
 export const NotFoundContainer = styled.div`
   width: 100vw;
-  height: calc(100vh - 80px);
-  background-color: #fff !important;
+  height: 100vh;
+  background-color: #eee !important;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -26,7 +14,7 @@ export const NotFoundContainer = styled.div`
   }
 `;
 export const ImageContainer = styled.img`
-  width: 80%;
+  width: 100%;
   height: 100%;
   object-fit: cover;
   @media only screen and (max-width: 480px) {

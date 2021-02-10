@@ -7,9 +7,9 @@ export const Container = styled.div`
   align-items: center;
   flex-direction: row-reverse;
   padding: 10px 0;
-  background: rgb(189, 237, 237);
+  background: #dc3545;
   border-radius: 0 0 15px 15px;
-  color: #555;
+  color: #eee;
 `;
 export const Menu = styled.div`
   font-size: 24px;
