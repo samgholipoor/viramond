@@ -1,10 +1,5 @@
 import React from "react";
-import {
-  NotFoundContainer,
-  ImageContainer,
-  Director,
-  DirectorContainer,
-} from "./NotFoundPage.styles.jsx";
+import { NotFoundContainer, ImageContainer } from "./NotFoundPage.styles.jsx";
 
 const NotFoundPage = () => {
   return (

@@ -16,7 +16,7 @@ const QrSelector = ({ qrResult, setToggle }) => {
         <QrHolder>
           <Title>Qr Code اسکن جیتا کد و </Title>
           <IconContainer>
-            <i class="fa fa-qrcode"></i>
+            <i className="fa fa-qrcode"></i>
           </IconContainer>
           <Title>اسکن کنید</Title>
         </QrHolder>
