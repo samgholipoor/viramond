@@ -3,7 +3,7 @@ import { MobileDevice } from "./NavBar.styles";
 import { IconButton } from "../IconButton/IconButton";
 
 const NavBar = () => {
-  const [toggleMenu, setToggleMenu] = useState(0);
+  const [toggleMenu, setToggleMenu] = useState(4);
 
   return (
     <MobileDevice>

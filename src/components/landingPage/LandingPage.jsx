@@ -8,11 +8,13 @@ import {
   Title2,
   Description,
 } from "./LandingPage.styles";
+import { Header } from "../common/Header";
 
 const LandingPageComponent = () => {
   return (
     <Container>
       <Holder>
+        <Header />
         <ImageContainer>
           <img src="/images/landingpage.png" alt="landingpage" />
         </ImageContainer>
