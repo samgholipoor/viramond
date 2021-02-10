@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   width: 100vw;
-  height: 100vh;
+  height: calc(100vh - 50px);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -13,7 +13,7 @@ export const Holder = styled.div`
   width: 320px;
   height: 100%;
   display: flex;
-  align-items: center;
+
   overflow: auto;
 
   ::-webkit-scrollbar {

@@ -11,6 +11,10 @@ const QrScanner = ({ setValue, setToggle }) => {
     setValue(err);
   };
 
+  const handleLoad = (err) => {
+    console.log(err);
+  };
+
   return (
     <QrReader
       delay={100}
@@ -21,6 +25,7 @@ const QrScanner = ({ setValue, setToggle }) => {
       }}
       onError={handleError}
       onScan={handleScan}
+      onLoad={handleLoad}
     />
   );
 };

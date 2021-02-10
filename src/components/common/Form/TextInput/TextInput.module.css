@@ -1,0 +1,41 @@
+.inputContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: right;
+}
+
+.formInput {
+  padding: 8px 8px;
+  width: 100%;
+  text-align: right !important;
+  outline: none;
+  border: none;
+  font-size: 0.9rem;
+  color: #666;
+  background-color: transparent;
+}
+.formInput:focus {
+  outline: none;
+  border: none;
+  background-color: transparent;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0px 1000px #ddd inset;
+}
+
+.errorMessage {
+  color: #d8000c;
+  background-color: #ffbaba;
+  border: 1px solid #d8000c;
+  padding: 6px 5px;
+  border-radius: 5px;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: right;
+}

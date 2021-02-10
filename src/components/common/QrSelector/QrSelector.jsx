@@ -7,9 +7,11 @@ import {
   QrResultHolder,
   QrResultTitle,
   QrResult,
+  TitleContainer,
+  ExitIcon,
 } from "./QrSelector.styles";
 
-const QrSelector = ({ qrResult, setToggle }) => {
+const QrSelector = ({ qrResult, setToggle, setQrResult }) => {
   const handleToggle = () => {
     navigator.permissions.query({ name: "camera" }).then((permissionObj) => {
       if (permissionObj.state === "granted") {
@@ -32,7 +34,12 @@ const QrSelector = ({ qrResult, setToggle }) => {
       </QrContainer>
       {qrResult && (
         <QrResultHolder>
-          <QrResultTitle>: نتیجه اسکن</QrResultTitle>
+          <TitleContainer>
+            <ExitIcon onClick={() => setQrResult("")}>
+              <i class="fa fa-times" aria-hidden="true"></i>
+            </ExitIcon>
+            <QrResultTitle>: نتیجه اسکن</QrResultTitle>
+          </TitleContainer>
           <QrResult>{qrResult}</QrResult>
         </QrResultHolder>
       )}

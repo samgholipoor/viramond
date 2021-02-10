@@ -52,3 +52,14 @@ export const QrResultTitle = styled.div`
 export const QrResult = styled.div`
   padding: 5px;
 `;
+export const TitleContainer = styled.div`
+  padding: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+`;
+export const ExitIcon = styled.div`
+  padding: 5px;
+  color: #444;
+  cursor: pointer;
+`;

@@ -8,6 +8,7 @@ import {
 import { Header } from "../common/Header";
 import { QrScanner } from "../common/QrScanner";
 import { QrSelector } from "../common/QrSelector";
+import { SearchForm } from "../searchForm/SearchForm";
 
 const LandingPageComponent = () => {
   const [toggle, setToggle] = useState(false);
@@ -20,13 +21,19 @@ const LandingPageComponent = () => {
         <ImageContainer>
           <img src="/images/bg.jpg" alt="landingpage" />
         </ImageContainer>
-        <QrContainer>
-          {!toggle ? (
-            <QrSelector qrResult={qrResult} setToggle={setToggle} />
-          ) : (
+
+        {!toggle ? (
+          <QrSelector
+            qrResult={qrResult}
+            setToggle={setToggle}
+            setQrResult={setQrResult}
+          />
+        ) : (
+          <QrContainer>
             <QrScanner setValue={setQrResult} setToggle={setToggle} />
-          )}
-        </QrContainer>
+          </QrContainer>
+        )}
+        <SearchForm />
       </Holder>
     </Container>
   );
