@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { UseSearchGender } from "../../core/api/location-api";
 import { useLocation } from "react-router-dom";
-import { Container, Cart } from "./SearchResult.styles";
+import { Container, Cart, Title } from "./SearchResult.styles";
 
 const SearchResult = () => {
   const { mutate } = UseSearchGender();
@@ -27,7 +27,18 @@ const SearchResult = () => {
         ?.filter((_, indx) => indx < 10)
         .map(({ name, status }, indx) => (
           <Cart key={indx}>
-            {name} {status}
+            <Title>
+              <span>{name}</span>
+              <span>
+                <i className="fas fa-user"></i>
+              </span>
+            </Title>
+            <Title>
+              <span>{status}</span>
+              <span>
+                <i className="fas fa-info-circle"></i>
+              </span>
+            </Title>
           </Cart>
         ))}
     </Container>
