@@ -13,7 +13,7 @@ export const Holder = styled.div`
   width: 320px;
   height: 100%;
   display: flex;
-
+  justify-content: center;
   overflow: auto;
 
   ::-webkit-scrollbar {
