@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import QrReader from "react-qr-scanner";
 
 const QrScanner = ({ setValue, setToggle }) => {
-  const [cameraMode, setCamerMode] = useState("rear");
+  const [cameraMode, setCamerMode] = useState("environment");
 
   const handleScan = (data) => {
     setValue(data?.text);
@@ -19,7 +19,9 @@ const QrScanner = ({ setValue, setToggle }) => {
   };
 
   const changeMode = () => {
-    cameraMode === "rear" ? setCamerMode("front") : setCamerMode("rear");
+    cameraMode === "environment"
+      ? setCamerMode("user")
+      : setCamerMode("reaenvironmentr");
   };
 
   return (
@@ -35,7 +37,7 @@ const QrScanner = ({ setValue, setToggle }) => {
         onScan={handleScan}
         onLoad={handleLoad}
         // legacyMode={true}
-        facingMode={cameraMode}
+        facingmode={cameraMode}
       />
       <span onClick={() => changeMode}> چرخش دوربین</span>
     </>
