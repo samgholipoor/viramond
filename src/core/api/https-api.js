@@ -1,5 +1,4 @@
 import axios from "axios";
-import Cookie from "js-cookie";
 import { toast } from "react-toastify";
 
 const https = {
@@ -8,19 +7,6 @@ const https = {
   delete: axios.delete,
   put: axios.put,
 };
-const accesstoken = "__hayat_accesstoken__";
-
-axios.interceptors.request.use(
-  (response) => {
-    // const accessToken = Cookie.get(accesstoken);
-    // response.headers.common["Authorization"] = `Bearer Bearer ${accessToken}`;
-
-    return response;
-  }
-  // (error) => {
-  //   return Promise.reject(error);
-  // }
-);
 
 axios.interceptors.response.use(undefined, (error) => {
   if (error.message === "Network Error" && !error.response) {
