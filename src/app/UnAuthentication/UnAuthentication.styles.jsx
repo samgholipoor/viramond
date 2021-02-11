@@ -2,18 +2,20 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   width: 100vw;
-  height: 100%;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  box-sizing: border-box;
 `;
 
 export const Holder = styled.div`
+  position: fixed;
+  top: 0;
   width: 320px;
-  height: 100%;
+  height: calc(100% - 54px);
   box-sizing: border-box;
   overflow: hidden;
+  background: #eee;
 
   @media only screen and (max-width: 500px) {
     width: 100%;
@@ -22,11 +24,11 @@ export const Holder = styled.div`
 
 export const Wrapper = styled.div`
   width: 320px;
-  height: calc(100vh - 54px);
-  background: #eee;
+  height: 100%;
   overflow: auto;
   box-sizing: border-box;
-  padding-bottom: 40px;
+  padding-bottom: 10px;
+  box-sizing: border-box;
 
   ::-webkit-scrollbar {
     width: 5px;

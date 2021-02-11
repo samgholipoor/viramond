@@ -11,12 +11,14 @@ export const QrReaderContainer = styled.div`
   border-radius: 8px;
   overflow: hidden;
   width: 250px;
+  max-width: 250px;
   height: 250px;
 `;
 
 export const Button = styled.div`
   width: 40px;
   height: 40px;
+  margin: 10px 0;
   background-color: #fff;
   border-radius: 50%;
   cursor: pointer;

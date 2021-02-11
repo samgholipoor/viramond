@@ -11,6 +11,7 @@ const UnAuthentication = () => {
       <Container>
         <Holder>
           <Wrapper>
+            <NavBar />
             <Switch>
               {routes.map((item, indx) => {
                 return (
@@ -27,8 +28,7 @@ const UnAuthentication = () => {
 
               <Redirect to="/not-found-page" />
             </Switch>{" "}
-            <NavBar />
-          </Wrapper>{" "}
+          </Wrapper>
         </Holder>
       </Container>
     </>
