@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import QrReader from "react-qr-scanner";
+import { toast } from "react-toastify";
 
 const QrScanner = ({ setValue, setToggle }) => {
   const [cameraMode, setCamerMode] = useState("environment");
@@ -10,8 +11,8 @@ const QrScanner = ({ setValue, setToggle }) => {
   };
 
   const handleError = (err) => {
-    setValue(err);
-    console.log(err);
+    setToggle(false);
+    toast.error("سترسی به دوربین دستگاه شما مسدود است ، لطفا فعال کنید");
   };
 
   const handleLoad = (err) => {
