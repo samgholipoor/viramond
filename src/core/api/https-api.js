@@ -21,7 +21,6 @@ axios.interceptors.response.use(undefined, (error) => {
 
   if (error?.response?.status === 401 || error?.response?.status === 403) {
     toast.error("لطفا وارد حساب کاربری خود شوید");
-    Cookie.remove(accesstoken);
     return Promise.reject(error);
   }
 
