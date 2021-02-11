@@ -1,22 +1,24 @@
 import React, { useState } from "react";
 import QrReader from "react-qr-scanner";
 import { toast } from "react-toastify";
+import { MiniSpinnerMiniPage } from "../Spinner/miniSpinner-minipage";
 
 const QrScanner = ({ setValue, setToggle }) => {
   const [cameraMode, setCamerMode] = useState("environment");
+  const [isLoading, setIsLoading] = useState(true);
 
   const handleScan = (data) => {
     setValue(data?.text);
     data && setToggle(false);
   };
 
-  const handleError = (err) => {
+  const handleError = () => {
     setToggle(false);
     toast.error("سترسی به دوربین دستگاه شما مسدود است ، لطفا فعال کنید");
   };
 
-  const handleLoad = (err) => {
-    console.log(err);
+  const handleLoad = () => {
+    setIsLoading(false);
   };
 
   const changeMode = () => {
@@ -27,6 +29,7 @@ const QrScanner = ({ setValue, setToggle }) => {
 
   return (
     <>
+      {isLoading && <MiniSpinnerMiniPage />}
       <QrReader
         delay={100}
         style={{
@@ -37,7 +40,6 @@ const QrScanner = ({ setValue, setToggle }) => {
         onError={handleError}
         onScan={handleScan}
         onLoad={handleLoad}
-        // legacyMode={true}
         facingmode={cameraMode}
       />
       <span onClick={() => changeMode}> چرخش دوربین</span>
