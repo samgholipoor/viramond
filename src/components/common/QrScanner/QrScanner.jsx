@@ -25,7 +25,7 @@ const QrScanner = ({ setValue, setToggle }) => {
   const changeMode = () => {
     cameraMode === "environment"
       ? setCamerMode("user")
-      : setCamerMode("reaenvironmentr");
+      : setCamerMode("environment");
   };
 
   return (
@@ -41,11 +41,11 @@ const QrScanner = ({ setValue, setToggle }) => {
           onError={handleError}
           onScan={handleScan}
           onLoad={handleLoad}
-          facingMode={cameraMode}
+          facingmode={cameraMode}
         />
       </QrReaderContainer>
       {!isLoading && (
-        <Button onClick={() => changeMode()}>
+        <Button onClick={changeMode}>
           <i className="fa fa-retweet"></i>
         </Button>
       )}
