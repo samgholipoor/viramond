@@ -3,14 +3,16 @@ var CACHE_DYNAMIC_NAME = "dynamic-v4";
 const urlsToChache = [
   "/",
   "./index.html",
-  "./css/main.css",
-  "./css/main.css.map",
-  "./css/spacing.min.css",
-  "./static/js/2.1b3fa684.chunk.js.map",
-  "./static/js/2.1b3fa684.chunk.js",
-  "./static/js/main.b19c69c7.chunk.js",
-  "./static/js/main.b19c69c7.chunk.js.map",
-  "./static/js/runtime-main.7f7134f8.js",
+  "./static/css/2.7740ab65.chunk.css",
+  "./static/css/2.7740ab65.chunk.css.map",
+  "./static/css/main.89f61664.chunk.css",
+  "./static/css/main.89f61664.chunk.css.map",
+  "./static/js/2.abbcf303.chunk.js",
+  "./static/js/2.abbcf303.chunk.js.map",
+  "./static/js/main.dccf9eca.chunk.js",
+  "./static/js/main.dccf9eca.chunk.js.map",
+  "./static/js/runtime-main.df859bee.js",
+  "./static/js/runtime-main.df859bee.js.map",
 ];
 const self = this;
 
