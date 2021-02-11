@@ -16,7 +16,7 @@ export const Holder = styled.div`
   padding-bottom: 5px;
   box-sizing: border-box;
 
-  ::-webkit-scrollbar {
+  /* ::-webkit-scrollbar {
     width: 5px;
   }
   ::-webkit-scrollbar-track {
@@ -28,7 +28,7 @@ export const Holder = styled.div`
   }
   ::-webkit-scrollbar-thumb:hover {
     background: #555;
-  }
+  } */
 
   @media only screen and (max-width: 500px) {
     width: 100%;
