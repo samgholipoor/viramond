@@ -22,6 +22,7 @@ const Button = (props) => {
       border={border}
       onClick={click}
       id={id}
+      type="submit"
     >
       {icon && <i className={icon}></i>}
       {children}

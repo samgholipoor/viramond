@@ -24,7 +24,6 @@ export const Title = styled.div`
 `;
 
 export const HeaderContainer = styled.div`
-  width: 100%;
   display: flex;
   align-items: center;
   padding: 10px 0;
