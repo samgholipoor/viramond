@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import QrReader from "react-qr-scanner";
 import { toast } from "react-toastify";
 import { MiniSpinnerMiniPage } from "../Spinner/miniSpinner-minipage";
+import { Button, QrReaderContainer } from "./QrScanner.styles";
 
 const QrScanner = ({ setValue, setToggle }) => {
   const [cameraMode, setCamerMode] = useState("environment");
@@ -22,19 +23,20 @@ const QrScanner = ({ setValue, setToggle }) => {
   };
 
   const changeMode = () => {
+    console.log("sa");
     cameraMode === "environment"
       ? setCamerMode("user")
       : setCamerMode("reaenvironmentr");
   };
 
   return (
-    <>
+    <QrReaderContainer>
       {isLoading && <MiniSpinnerMiniPage />}
       <QrReader
         delay={100}
         style={{
           height: "inherit",
-          width: "inherit",
+          width: "100%",
           borderRadius: "8px",
         }}
         onError={handleError}
@@ -42,8 +44,10 @@ const QrScanner = ({ setValue, setToggle }) => {
         onLoad={handleLoad}
         facingmode={cameraMode}
       />
-      <span onClick={() => changeMode}> چرخش دوربین</span>
-    </>
+      <Button onClick={changeMode}>
+        <i class="fa fa-retweet"></i>
+      </Button>
+    </QrReaderContainer>
   );
 };
 
