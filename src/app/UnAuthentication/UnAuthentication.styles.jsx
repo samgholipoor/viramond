@@ -26,7 +26,7 @@ export const Wrapper = styled.div`
   background: #eee;
   overflow: auto;
   box-sizing: border-box;
-  padding-bottom: 5px;
+  padding-bottom: 40px;
 
   ::-webkit-scrollbar {
     width: 5px;

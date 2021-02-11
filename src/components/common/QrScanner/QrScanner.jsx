@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import QrReader from "react-qr-scanner";
 import { toast } from "react-toastify";
 import { MiniSpinnerMiniPage } from "../Spinner/miniSpinner-minipage";
-import { Button, QrReaderContainer } from "./QrScanner.styles";
+import { Button, QrReaderContainer, Container } from "./QrScanner.styles";
 
 const QrScanner = ({ setValue, setToggle }) => {
   const [cameraMode, setCamerMode] = useState("environment");
@@ -23,31 +23,33 @@ const QrScanner = ({ setValue, setToggle }) => {
   };
 
   const changeMode = () => {
-    console.log("sa");
     cameraMode === "environment"
       ? setCamerMode("user")
       : setCamerMode("reaenvironmentr");
   };
 
   return (
-    <QrReaderContainer>
-      {isLoading && <MiniSpinnerMiniPage />}
-      <QrReader
-        delay={100}
-        style={{
-          height: "inherit",
-          width: "100%",
-          borderRadius: "8px",
-        }}
-        onError={handleError}
-        onScan={handleScan}
-        onLoad={handleLoad}
-        facingmode={cameraMode}
-      />
-      <Button onClick={changeMode}>
-        <i class="fa fa-retweet"></i>
-      </Button>
-    </QrReaderContainer>
+    <Container>
+      <QrReaderContainer>
+        {isLoading && <MiniSpinnerMiniPage />}
+        <QrReader
+          delay={100}
+          style={{
+            height: "100%",
+            width: "100%",
+          }}
+          onError={handleError}
+          onScan={handleScan}
+          onLoad={handleLoad}
+          facingmode={cameraMode}
+        />
+      </QrReaderContainer>
+      {!isLoading && (
+        <Button onClick={() => changeMode()}>
+          <i class="fa fa-retweet"></i>
+        </Button>
+      )}
+    </Container>
   );
 };
 

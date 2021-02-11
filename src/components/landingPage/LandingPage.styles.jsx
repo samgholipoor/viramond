@@ -23,9 +23,11 @@ export const ImageContainer = styled.div`
 `;
 export const QrContainer = styled.div`
   width: 100%;
-  height: 220px;
-  margin: 5px 0;
-  padding: 0 5px;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 5px;
 
   & > * {
     width: 100%;

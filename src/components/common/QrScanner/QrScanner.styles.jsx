@@ -1,18 +1,21 @@
 import styled from "styled-components";
 
-export const QrReaderContainer = styled.div`
+export const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-between;
+`;
+
+export const QrReaderContainer = styled.div`
   border-radius: 8px;
   overflow: hidden;
-  position: relative;
+  max-width: 300px;
+  height: 100%;
 `;
+
 export const Button = styled.div`
   z-index: 99999;
-  position: absolute;
-  bottom: 5px;
-  right: 15px;
   width: 40px;
   height: 40px;
   background-color: #fff;
