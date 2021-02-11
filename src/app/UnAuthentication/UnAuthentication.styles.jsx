@@ -6,18 +6,21 @@ export const Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  box-sizing: border-box;
 `;
 
 export const Holder = styled.div`
   position: fixed;
   top: 0;
+  right: 50%;
+  transform: translate(50%);
   width: 320px;
   height: calc(100% - 54px);
   box-sizing: border-box;
   overflow: hidden;
   background: #eee;
 
-  @media only screen and (max-width: 500px) {
+  @media only screen and (max-width: 600px) {
     width: 100%;
   }
 `;
@@ -44,7 +47,7 @@ export const Wrapper = styled.div`
     background: #555;
   }
 
-  @media only screen and (max-width: 500px) {
+  @media only screen and (max-width: 600px) {
     width: 100%;
   }
 `;
