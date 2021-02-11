@@ -15,7 +15,7 @@ export const Holder = styled.div`
   right: 50%;
   transform: translate(50%);
   width: 320px;
-  height: calc(100% - 54px);
+  height: 100%;
   box-sizing: border-box;
   overflow: hidden;
   background: #eee;
@@ -27,7 +27,8 @@ export const Holder = styled.div`
 
 export const Wrapper = styled.div`
   width: 320px;
-  height: 100%;
+
+  height: calc(100% - 54px);
   overflow: auto;
   box-sizing: border-box;
   padding-bottom: 10px;
