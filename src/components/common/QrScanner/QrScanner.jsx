@@ -41,12 +41,12 @@ const QrScanner = ({ setValue, setToggle }) => {
           onError={handleError}
           onScan={handleScan}
           onLoad={handleLoad}
-          facingmode={cameraMode}
+          facingMode={cameraMode}
         />
       </QrReaderContainer>
       {!isLoading && (
         <Button onClick={() => changeMode()}>
-          <i class="fa fa-retweet"></i>
+          <i className="fa fa-retweet"></i>
         </Button>
       )}
     </Container>
