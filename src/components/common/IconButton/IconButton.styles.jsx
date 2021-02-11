@@ -15,7 +15,6 @@ export const Container = styled(Link)`
   text-decoration: none;
 
   &:hover {
-    filter: brightness(80%);
     color: ${({ color }) => (color ? color : "#666")};
   }
 

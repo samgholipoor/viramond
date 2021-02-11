@@ -22,3 +22,31 @@ export const Title = styled.div`
     margin-right: 5px;
   }
 `;
+
+export const HeaderContainer = styled.div`
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+  background: #dc3545;
+  border-radius: 0 0 15px 15px;
+  color: #eee;
+  position: sticky;
+  top: 0;
+`;
+
+export const Back = styled.div`
+  cursor: pointer;
+  margin: 0 5px;
+  padding: 0 5px;
+  border-radius: 8px;
+  border: 1px solid #eee;
+  padding: 5px 8px;
+  display: flex;
+  align-items: center;
+  font-size: 0.9rem;
+
+  & > *:first-child {
+    margin-right: 5px;
+  }
+`;

@@ -36,7 +36,7 @@ const QrSelector = ({ qrResult, setToggle, setQrResult }) => {
         <QrResultHolder>
           <TitleContainer>
             <ExitIcon onClick={() => setQrResult("")}>
-              <i class="fa fa-times" aria-hidden="true"></i>
+              <i className="fa fa-times" aria-hidden="true"></i>
             </ExitIcon>
             <QrResultTitle>: نتیجه اسکن</QrResultTitle>
           </TitleContainer>

@@ -10,5 +10,5 @@ export const MobileDevice = styled.div`
   display: flex;
   background: #fff;
   justify-content: space-around;
-  z-index: 99;
+  z-index: 9999;
 `;

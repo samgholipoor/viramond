@@ -12,9 +12,9 @@ export const Holder = styled.div`
   background: #eee;
   width: 320px;
   height: 100%;
-  display: flex;
-  justify-content: center;
   overflow: auto;
+  padding-bottom: 5px;
+  box-sizing: border-box;
 
   ::-webkit-scrollbar {
     width: 5px;

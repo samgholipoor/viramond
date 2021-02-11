@@ -26,7 +26,7 @@ const SearchForm = () => {
         <Form>
           <InputContainer>
             <TextInput name="gender" placeholder="جستجوی پیشرفته" />
-            <Button icon="fa fa-search" />
+            <Button background="#dc3545" icon="fa fa-search" />
           </InputContainer>
         </Form>
       </Formik>
